@@ -1,0 +1,19 @@
+{
+  "name": "lancer-resources",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@oruga-ui/oruga-next": "^0.4.2",
+    "bulma": "^0.9.3",
+    "vue": "^3.2.16",
+    "vue3-markdown-it": "^1.0.9"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "vite": "^2.6.4"
+  }
+}
