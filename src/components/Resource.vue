@@ -1,34 +1,53 @@
 <template>
 	<div class="box">
 		<div class="card">
+			<div class="card-image">
+				<figure class="image is-4by3">
+					<img :src="image" alt="Placeholder image">
+				</figure>
+			</div>
 			<div class="card-content">
-				<div class="media">
-					<div class="media-content">
-						<p class="title is-4">Discord Username</p>
-					</div>
+				<div class="media-content">
+					<p class="title is-4">{{resource.title}}</p>
+					<p class="subtitle is-6">{{resource.author}}</p>
 				</div>
-
-				<div class="content">
-					Text
-				</div>
+			</div>
+			<div class="content">
+				{{resource.description}}
+			</div>
+			<div class="content">
+				<button class="button is-large is-fullwidth is-primary" @click.prevent="openUrl">Open Asset</button>
+			</div>
+			<div class="tags">
+				<ResourceTag v-for="string in this.resource.tags" :key="string" :tag="string"/>
 			</div>
 		</div>
 	</div>
 </template>
 
-<script lang="ts">
-
-import {defineComponent} from 'vue';
-
-export default defineComponent({
+<script>
+import ResourceTag from './ResourceTag.vue'
+export default({
   name: 'Resource',
-  components: { },
+	components:{
+		ResourceTag
+	},
 	props:{
 		resource: Object,
 	},
-  setup(props) {
-
-  }
+	computed: {
+		image(){
+			if (this.resource.image == ""){
+				return "/placeholder.jpg"
+			}
+			return this.resource.image;
+		}
+	},
+	methods: {
+		openUrl(){
+			window.open(this.resource.url, '_blank')
+		}
+	}
 });
 </script>
 
@@ -36,7 +55,8 @@ export default defineComponent({
 <style scoped>
 
 .box {
-	max-width: 20vw;
+	min-width:345px;
+	max-width:370px;
 }
 
 </style>
