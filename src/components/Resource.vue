@@ -2,7 +2,7 @@
 	<div class="box">
 		<div class="card">
 			<div class="card-image">
-				<figure class="image is-4by3">
+				<figure class="image is-16by9">
 					<img :src="image" alt="Placeholder image">
 				</figure>
 			</div>
@@ -57,6 +57,10 @@ export default({
 .box {
 	min-width:345px;
 	max-width:370px;
+}
+
+.image img{
+	object-fit: cover;
 }
 
 </style>
