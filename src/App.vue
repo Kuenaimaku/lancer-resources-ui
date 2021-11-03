@@ -13,7 +13,7 @@
     <Searchbar :search="search" :options="options" @tagSelected="searchTagSelected"/>
   </section>
   <section class="section flexContainer">
-    <Resource v-for="item in filter" :key="item.url" :resource="item"/>
+    <Resource v-for="item in filter" :key="item.resourceId" :resource="item"/>
   </section>
 </template>
 
