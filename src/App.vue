@@ -101,7 +101,6 @@ export default {
   flex-wrap: wrap;
   column-gap: 1em;
   align-items: flex-start;
-  justify-content: space-between;
 }
 
 
