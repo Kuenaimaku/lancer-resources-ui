@@ -92,7 +92,7 @@ export default {
 }
 
 .section {
-  background:#a2a2a2;
+  background:#2a2a2a;
 }
 
 .flexContainer {
@@ -101,6 +101,7 @@ export default {
   flex-wrap: wrap;
   column-gap: 1em;
   align-items: flex-start;
+  justify-content: center;
 }
 
 

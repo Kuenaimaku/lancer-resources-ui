@@ -1,5 +1,5 @@
 <template>
-	<div class="columns is-centered">
+	<div class="columns is-centered searchbar">
 		<div class="column is-two-fifths">
 			<div class="field">
 				<label class="label">Title</label>
@@ -50,5 +50,10 @@ export default({
 <style>
 p.control.tags {
     margin-top: 16px;
+}
+
+.searchbar{
+		background-color:#a2a2a2;
+		box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
 }
 </style>
